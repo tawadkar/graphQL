@@ -29,7 +29,7 @@ public class GraphqlDemoApplication implements CommandLineRunner {
 		b2.setDesc("Learn Python from Basic");
 		b2.setPrice(5000);
 		b2.setAuthor("TestPyton");
-        
+
 		//Saves book in Database
 		this.bookService.create(b1);
 		this.bookService.create(b2);
