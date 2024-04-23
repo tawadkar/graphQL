@@ -1,10 +1,12 @@
 type Mutation{
 createBook(book:BookInput):Book
 }
-type Query {
-    allBooks:[Book]
+#limit:Int is considered in the query while execution but not limiting the output , need to check
+type Query{
+    allBooks(limit:Int!):[Book]
     getBook(bookId:Int):Book
 }
+
 
 type Book{
     id:ID!
@@ -21,3 +23,4 @@ input BookInput{
     author:String
 
 }
+
